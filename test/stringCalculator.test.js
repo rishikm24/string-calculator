@@ -10,4 +10,9 @@ describe('String calculator', () => {
         const calculator = new StringCalculator()
         expect(calculator.add("1")).toBe(1)
     })
+
+    test('returns the sum of two numbers', () => {
+        const calculator = new StringCalculator()
+        expect(calculator.add("1,5")).toBe(6)
+    })
 })
