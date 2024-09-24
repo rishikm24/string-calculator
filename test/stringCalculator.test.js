@@ -35,4 +35,9 @@ describe('String calculator', () => {
         const calculator = new StringCalculator()
         expect(() => calculator.add("1,-2,3")).toThrow('negative numbers not allowed: -2')
     })
+
+    test('throws an error when multiple negative numbers are provided', () => {
+        const calculator = new StringCalculator()
+        expect(() => calculator.add("-1,-2,-3")).toThrow('negative numbers not allowed: -1,-2,-3')
+    })
 })
