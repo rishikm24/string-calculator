@@ -1,0 +1,25 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "String calculator assignment",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishikm24/string-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishikm24/string-calculator/issues"
+  },
+  "homepage": "https://github.com/rishikm24/string-calculator#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
