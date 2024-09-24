@@ -13,7 +13,18 @@ class StringCalculator {
             numbers = parts[1];
         }
         const numberArr = numbers.split(delimiter)
-        return numberArr.reduce((total, num) => total + parseInt(num), 0)
+        let negatives = []
+        const total = numberArr.reduce((total, num) => {
+            let value = parseInt(num)
+            if (value < 0) {
+                negatives.push(value)
+            }
+            return total + value
+        }, 0)
+        if (negatives.length) {
+            throw new Error(`negative numbers not allowed: ${negatives.join(',')}`)
+        }
+        return total
     }
 }
 
