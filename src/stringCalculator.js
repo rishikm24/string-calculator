@@ -19,6 +19,7 @@ class StringCalculator {
             if (value < 0) {
                 negatives.push(value)
             }
+            if (value > 1000) value = 0
             return total + value
         }, 0)
         if (negatives.length) {

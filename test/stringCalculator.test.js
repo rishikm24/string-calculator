@@ -40,4 +40,9 @@ describe('String calculator', () => {
         const calculator = new StringCalculator()
         expect(() => calculator.add("-1,-2,-3")).toThrow('negative numbers not allowed: -1,-2,-3')
     })
+
+    test('return the sum ignoring numbers greater than 1000', () => {
+        const calculator = new StringCalculator()
+        expect(calculator.add("10,20,1001,30")).toBe(60)
+    })
 })
