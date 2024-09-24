@@ -45,4 +45,9 @@ describe('String calculator', () => {
         const calculator = new StringCalculator()
         expect(calculator.add("10,20,1001,30")).toBe(60)
     })
+
+    test('returns the sum of numbers having custom delimiters of any length', () => {
+        const calculator = new StringCalculator()
+        expect(calculator.add("//[***]\n1***2***3")).toBe(6)
+    })
 })

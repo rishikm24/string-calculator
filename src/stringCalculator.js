@@ -12,7 +12,7 @@ class StringCalculator {
             delimiter = new RegExp(parts[0].slice(2));
             numbers = parts[1];
         }
-        const numberArr = numbers.split(delimiter)
+        const numberArr = numbers.split(delimiter).filter(o => o !== '')
         let negatives = []
         const total = numberArr.reduce((total, num) => {
             let value = parseInt(num)
