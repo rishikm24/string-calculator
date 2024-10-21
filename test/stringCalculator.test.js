@@ -55,4 +55,14 @@ describe('String calculator', () => {
         const calculator = new StringCalculator()
         expect(calculator.compute("//*\n2*3")).toBe(6)
     })
+
+    test('throws an error when multiple negative numbers are provided for multiplication', () => {
+        const calculator = new StringCalculator()
+        expect(() => calculator.compute("//*\n2*-3")).toThrow('negative numbers not allowed: -3')
+    })
+
+    test('throws an error when multiple negative numbers are provided for multiplication', () => {
+        const calculator = new StringCalculator()
+        expect(() => calculator.compute("//*\n2*-3*-2")).toThrow('negative numbers not allowed: -3,-2')
+    })
 })
