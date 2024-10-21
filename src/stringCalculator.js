@@ -19,7 +19,7 @@ class StringCalculator {
         }
         const numberArr = numbers.split(delimiter).filter(o => o !== '')
         let negatives = []
-        let total = 0
+        let total = 1
         if (multiply) {
             for (let num of numberArr) {
                 total *= num
